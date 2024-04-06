@@ -10,11 +10,6 @@ end
 
 get("/rock") do
   moves = ["rock","paper","scissors"].sample
-
-  
-  " We played Rock! "
-  " They played #{moves}! "
-  
-
-
+  outcome = tied
+  erb(:rock)
 end
