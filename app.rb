@@ -2,6 +2,10 @@ require "sinatra"
 require "sinatra/reloader"
 
 get("/") do
+  erb(:tt)
+end
+
+get("/homepage") do
   erb(:homepage)
 end
 
