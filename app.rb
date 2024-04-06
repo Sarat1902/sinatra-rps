@@ -2,13 +2,7 @@ require "sinatra"
 require "sinatra/reloader"
 
 get("/") do
-  "
-  <h1>Welcome to your Sinatra App!</h1>
-  <body>
-  <div>
-  <a href = https://en.wikipedia.org/wiki/Rock_paper_scissors > From wikipedia </a>
-  </div>
-  "
+  erb(:homepage)
 end
 
 get("/rock") do
