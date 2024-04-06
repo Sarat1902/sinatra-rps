@@ -4,9 +4,22 @@
     <title>Sinatra RPS</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
+  
+  <style>
+  .items {
+    display: flex;
+    flex-direction: column
+  }
+  </style>
+  
   </head>
 
   <body>
+    <div class = items> 
+    <a href = "/rock"> Play Rock </a>
+    <a href = "/paper"> Play paper </a>
+    <a href = "/scissors"> Play scissors </a>
+    </div>
 
     <%= yield %>
 
