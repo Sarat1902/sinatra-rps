@@ -7,3 +7,14 @@ get("/") do
   <p>Define some routes in app.rb</p>
   "
 end
+
+get("/rock") do
+  moves = ["rock","paper","scissors"].sample
+
+  
+  " We played Rock! "
+  " They played #{moves}! "
+  
+
+
+end
