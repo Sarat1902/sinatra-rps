@@ -2,12 +2,12 @@ require "sinatra"
 require "sinatra/reloader"
 
 get("/") do
-  erb(:tt)
+  erb(:homepage, {:layout => :homepage})
 end
 
-get("/homepage") do
-  erb(:homepage, {:layout => :homepage })
-end
+#get("/homepage") do
+ # erb(:homepage, {:layout => :homepage })
+#end
 
 get("/rock") do
   move = ["rock","paper","scissors"]
