@@ -6,7 +6,7 @@ get("/") do
 end
 
 get("/homepage") do
-  erb(:homepage)
+  erb(:homepage, {:layout => :homepage })
 end
 
 get("/rock") do
@@ -14,11 +14,11 @@ get("/rock") do
   @moves = move.sample
   
   if @moves == "rock"
-    @outcome = "tied"
+    @outcome = "we tied!"
   elsif @moves == "paper"
-    @outcome = "You Lose"
+    @outcome = "we lost!"
   else
-    @outcome = "You Win!!"
+    @outcome = "we won!"
   end
 
   erb(:rock)
@@ -30,11 +30,11 @@ get("/paper") do
   @moves = move.sample
   
   if @moves == "rock"
-    @outcome = "You Win!!"
+    @outcome = "we won!"
   elsif @moves == "paper"
-    @outcome = "You Tied"
+    @outcome = "we tied!"
   else
-    @outcome = "You Lost"
+    @outcome = "we lost!"
   end
 
   erb(:paper)
@@ -45,11 +45,11 @@ get("/scissors") do
   @moves = move.sample
   
   if @moves == "rock"
-    @outcome = "You Lost"
+    @outcome = "we lost!"
   elsif @moves == "paper"
-    @outcome = "You Win!!"
+    @outcome = "we won!"
   else
-    @outcome = "You Tied"
+    @outcome = "we tied!"
   end
 
   erb(:scissors)
