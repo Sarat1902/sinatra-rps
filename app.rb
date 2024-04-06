@@ -9,7 +9,8 @@ get("/") do
 end
 
 get("/rock") do
-  moves = ["rock","paper","scissors"].sample
-  outcome = tied
+  move = ["rock","paper","scissors"]
+  moves = move.sample
+  outcome = "tied"
   erb(:rock)
 end
